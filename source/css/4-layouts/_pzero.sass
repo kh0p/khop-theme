@@ -1,16 +1,21 @@
 .container
+  @include media('>=md')
+    flex-wrap: wrap
+
   display: flex
   flex-direction: row
   height: 100%
-  background-color: lightcoral
+  background-color: $box-test-color
   justify-content: center
   flex-wrap: nowrap
-  @include sm
-    flex-wrap: wrap
   align-items: stretch
 
 .col
+  min-width: 200px
 
 .col:nth-child(2)
-  background-color: lightblue
   width: 680px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $box-test-color

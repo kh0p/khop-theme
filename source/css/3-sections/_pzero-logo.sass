@@ -1,6 +1,10 @@
 .logo
-  background-color: red
-  text-align: center
-  top: -50%
-  img
-    width: 200px
+  background-color: $box-test-color
+
+  @include mixin('>=md')
+    img
+      width: 180px
+
+  @include mixin('<=md')
+    img
+      width: 220px
