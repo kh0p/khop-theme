@@ -10,7 +10,8 @@ var data = require('gulp-data'),
 var sass = require('gulp-sass'),
     pleeease = require('gulp-pleeease'),
     csscomb = require('gulp-csscomb'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin'),
+    prefixer = require('gulp-autoprefixer');
 
 var jade = require('gulp-jade');
 
@@ -67,6 +68,7 @@ gulp.task('sass', function () {
       minifier: false,
       autoprefixer: 'chrome >= 39'
     }))
+    .pipe(prefixer())
     .on('error', console.error.bind(console))
     .pipe(header('@charset "utf-8";\n'))
     .pipe(gulp.dest('./_site/assets/css'))
@@ -80,6 +82,7 @@ gulp.task('sass:deproy', function () {
       autoprefixer: AUTOPREFIXER_BROWSERS,
       minifier: false
     }))
+    .pipe(prefixer())
     .pipe(csscomb())
     .pipe(cssmin())
     .pipe(header(BANNER, { pkg : pkg } ))

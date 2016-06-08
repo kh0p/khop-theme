@@ -1,0 +1,16 @@
+$phone: 34em
+$tablet: 48em
+$desktop: 62em
+$ldesktop: 75em
+
+@mixin sm
+  @media (min-width: #{$phone})
+    @content
+
+@mixin md
+  @media (min-width: #{$tablet})
+    @content
+
+@mixin lg
+  @media (min-width: #{$desktop})
+    @content

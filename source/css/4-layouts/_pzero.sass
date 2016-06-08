@@ -1,2 +1,16 @@
-.wrap
-  background: linear-gradient(hsla(335, 100%, 50%, 0.5), transparent)
+.container
+  display: flex
+  flex-direction: row
+  height: 100%
+  background-color: lightcoral
+  justify-content: center
+  flex-wrap: nowrap
+  @include sm
+    flex-wrap: wrap
+  align-items: stretch
+
+.col
+
+.col:nth-child(2)
+  background-color: lightblue
+  width: 680px
