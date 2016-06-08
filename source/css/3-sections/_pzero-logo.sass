@@ -1,10 +1,21 @@
-.logo
+#spin
+  visibility: hidden
   background-color: $box-test-color
+  @include media('>=md')
+    position: absolute
+  @include media('<=md')
+    position: absolute
 
-  @include mixin('>=md')
+.logo
+  visibility: hidden
+  background-color: $box-test-color
+  position: relative
+  padding: 130px 220px
+
+  @include media('<=md')
     img
-      width: 180px
+      width: 92px
 
-  @include mixin('<=md')
+  @include media('>=md')
     img
       width: 220px
