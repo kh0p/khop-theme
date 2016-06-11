@@ -12,9 +12,9 @@ $(document).ready(function(){
   $('#spin').hide().delay(1400).fadeIn(2400, function () {
     if (viewport.matches) {
       $('canvas#spin').attr('height', '310px').attr('width', '310px');
-      drawLogoCircleAnim(true, true, 1);
+      drawLogoCircleAnim(true, true, 30);
     } else {
-      drawLogoCircleAnim(false, true, 1);
+      drawLogoCircleAnim(false, true, 30);
     }
   });
 

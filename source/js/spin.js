@@ -19,15 +19,34 @@ var drawLogoCircle = function (viewSmall, angle, moveStart) {
   if (viewSmall == true) {
     context.clearRect(0, 0, canvas.width, canvas.height);
     for(i = 0; i < 3; i++) {
-      drawCircle("spin", 105, 105, 100-i*8, 45+moveStart, angle-12*i, false, "#ff1e6d", 6);
+      drawCircle("spin", 155, 155, 100-i*8, 45-4*i+moveStart, angle-4*i, false, "#ff1e6d", 6);
     }
   } else {
     context.clearRect(0, 0, canvas.width, canvas.height);
     for(i = 0; i < 3; i++) {
-      drawCircle("spin", 320, 320, 280-i*16, 45+moveStart, angle-12*i, false, "#ff1e6d", 12);
+      drawCircle("spin", 310, 310, 280-i*16, 45-4*i+moveStart, angle-4*i, false, "#ff1e6d", 12);
     }
   }
 }
+
+function setDeceleratingTimeout( callback, factor, times )
+{
+  var internalCallback = function( t, counter )
+  {
+    return function()
+    {
+      if ( --t > 0 )
+      {
+        window.setTimeout( internalCallback, ++counter * factor );
+        callback();
+      }
+    }
+  }( times, 0 );
+
+  window.setTimeout( internalCallback, factor );
+}
+
+
 
 var drawLogoCircleAnim = function (viewSmall, animate, time) {
   var canvas = document.getElementById("spin");
@@ -36,19 +55,12 @@ var drawLogoCircleAnim = function (viewSmall, animate, time) {
   if (animate == true) {
     var i = 0;
     var id = setInterval(function () {
-      if (i==393)
-        drawLogoCircle(viewSmall, 393, 45);
+      if (i==430)
+        drawLogoCircle(viewSmall, 430, 45);
       else
         drawLogoCircle(viewSmall, i++, 45);
     }, time);
   } else {
     drawLogoCircle(viewSmall, 360, 45);
   }
-}
-
-var easeQuad = function (a, x, limit) {
-  var y = a*(x*x-x*limit);
-  var max = limit/2;
-  if (y < max && y > 0)
-    return y;
 }
