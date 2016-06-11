@@ -1,9 +1,6 @@
 #spin
   background-color: $box-test-color
-  @include media('>=md')
-    position: absolute
-  @include media('<=md')
-    position: absolute
+
 
 .logo
   visibility: hidden
@@ -11,10 +8,5 @@
   position: relative
   padding: 130px 220px
 
-  @include media('<=md')
-    img
-      width: 92px
-
-  @include media('>=md')
-    img
-      width: 220px
+  img
+    width: 200px
