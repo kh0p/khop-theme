@@ -3,30 +3,40 @@ $(document).ready(function(){
 
   $('div.hide-on-load').animate({height: '0%'}, 1000, function() {
     $('div.hide-on-load').attr('class', 'null');
-  }).delay(1000);
+    $('.logo').delay(2000).css("visibility", "visible");
+  }).delay(2000);
   $('.logo').hide().delay(1400).fadeIn(2400, function () {
     $('this').animate({padding: "25"}, 300);
   });
-
-  $('canvas#spin').delay(1400).css("visibility", "visible");
-  $('.logo').delay(1400).css("visibility", "visible");
+  $('#spin').hide().delay(1400).fadeIn(2400);
+  $('#spin').hide().delay(1400).fadeIn(2400, function () {
+    if (viewport.matches) {
+      $('canvas#spin').attr('height', '310px').attr('width', '310px');
+      drawLogoCircleAnim(true, true, 1);
+    } else {
+      drawLogoCircleAnim(false, true, 1);
+    }
+  });
 
   var viewport = window.matchMedia("(max-width: 768px)");
 
-  if (viewport.matches) {
-    $('canvas#spin').attr('height', '310px').attr('width', '310px');
-    drawLogoCircle(true);
-  } else {
-    drawLogoCircle(false);
-  }
+  // viewSmall, animate, interval
+
+
 
   viewport.addListener(function(mq) {
     if(mq.matches) {
       $('canvas#spin').attr('height', '310px').attr('width', '310px');
-      drawLogoCircle(true);
+      var canvas = document.getElementById("spin");
+      var context = canvas.getContext( "2d" );
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      drawLogoCircleAnim(true, false, 0);
     } else {
       $('canvas#spin').attr('height', '620px').attr('width', '620px');
-      drawLogoCircle(false);
+      var canvas = document.getElementById("spin");
+      var context = canvas.getContext( "2d" );
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      drawLogoCircleAnim(false, false, 0);
     }
   });
 
