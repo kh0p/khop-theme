@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kh0p/khop-theme.svg?branch=master)](https://travis-ci.org/kh0p/khop-theme)
+
 # TODO
 - `logo.svg` font problem: the original font used for logo in `logo.svg` was "Yu Gothic". Sadly,
 I can't include it in the project. I'm trying different fonts Like "Hiragino Sans". I also
