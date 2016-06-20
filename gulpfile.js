@@ -63,10 +63,6 @@ gulp.task('sass', function () {
   gulp.src(['./source/css/*.scss','./source/css/**/_*.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(pleeease({
-      minifier: false,
-      autoprefixer: 'chrome >= 39'
-    }))
     .pipe(prefixer())
     .on('error', console.error.bind(console))
     .pipe(header('@charset "utf-8";\n'))
