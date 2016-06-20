@@ -8,7 +8,6 @@ var data = require('gulp-data'),
     plumber = require('gulp-plumber');
 
 var sass = require('gulp-sass'),
-    pleeease = require('gulp-pleeease'),
     csscomb = require('gulp-csscomb'),
     cssmin = require('gulp-cssmin'),
     prefixer = require('gulp-autoprefixer');
@@ -78,10 +77,6 @@ gulp.task('sass', function () {
 gulp.task('sass:deproy', function () {
   gulp.src(['./source/css/main.scss'])
     .pipe(sass())
-    .pipe(pleeease({
-      autoprefixer: AUTOPREFIXER_BROWSERS,
-      minifier: false
-    }))
     .pipe(prefixer())
     .pipe(csscomb())
     .pipe(cssmin())
