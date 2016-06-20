@@ -4,4 +4,7 @@ node_js:
 before_script:
   - npm install -g gulp
   - npm install
-script: gulp
+script: 
+  - gulp sass
+  - gulp jade
+  - gulp compile-js
