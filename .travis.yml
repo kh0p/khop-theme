@@ -4,6 +4,9 @@ before_script:
   - . build.sh
   - npm install -g gulp
   - npm install
+cache:
+  directories:
+    - node_modules 
 script: 
   - gulp sass
   - gulp jade
