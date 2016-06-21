@@ -13,6 +13,10 @@
   ],
   "author": "Kamil Zak (kh0p)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kh0p/khop-theme"
+  },
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
@@ -25,7 +29,6 @@
     "gulp-data": "^1.2.1",
     "gulp-header": "^1.8.6",
     "gulp-jade": "^1.1.0",
-    "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-sitemap": "^4.1.1",
