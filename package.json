@@ -14,8 +14,8 @@
   "author": "Kamil Zak (kh0p)",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.12.12",
-    "del": "^2.2.0",
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-coffee": "^2.3.2",

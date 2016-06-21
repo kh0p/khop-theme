@@ -8,7 +8,6 @@ var data = require('gulp-data'),
     plumber = require('gulp-plumber');
 
 var sass = require('gulp-sass'),
-    csscomb = require('gulp-csscomb'),
     cssmin = require('gulp-cssmin'),
     prefixer = require('gulp-autoprefixer');
 
@@ -74,7 +73,6 @@ gulp.task('sass:deproy', function () {
   gulp.src(['./source/css/main.scss'])
     .pipe(sass())
     .pipe(prefixer())
-    .pipe(csscomb())
     .pipe(cssmin())
     .pipe(header(BANNER, { pkg : pkg } ))
     .pipe(gulp.dest('./_site/assets/css'));
