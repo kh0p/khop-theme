@@ -1,3 +1,22 @@
+require "rubygems"
+require "json"
+
+namespace :package do
+  desc "Update package.json version (arg: version)"
+  task :version, [:number] do |t, args|
+    package = File.read("package.json")
+    content = JSON.parse(package)
+    content["version"] = args[:number]
+    
+    # Exporting changes back to package.json
+    open("package.json", "w+") do |f|
+      f.puts JSON.pretty_generate content
+    end
+    
+    puts "Version in package.json has been changed to " + content["version"]
+  end
+end
+
 desc "Full --save-dev update"
 task :update do
   dep = [
