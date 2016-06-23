@@ -1,6 +1,26 @@
 require "rubygems"
 require "json"
 
+# Configuration
+dep = [
+  "browser-sync",
+  "del",
+  "gulp",
+  "gulp-autoprefixer",
+  "gulp-coffee",
+  "gulp-concat",
+  "gulp-cssmin",
+  "gulp-data",
+  "gulp-header",
+  "gulp-jade",
+  "gulp-plumber",
+  "gulp-sass",
+  "gulp-sitemap",
+  "gulp-sitemap-files",
+  "gulp-uglify",
+  "run-sequence" 
+]
+
 namespace :package do
   desc "Update package.json version (arg: version)"
   task :version, [:number] do |t, args|
@@ -17,26 +37,15 @@ namespace :package do
   end
 end
 
+desc "Build dependencies from ground-up"
+task :build_dep do
+  dep.each do |d|
+    system "npm install --save-dev " + d
+  end
+end
+
 desc "Full --save-dev update"
 task :update do
-  dep = [
-    "browser-sync",
-    "del",
-    "gulp",
-    "gulp-autoprefixer",
-    "gulp-coffee",
-    "gulp-concat",
-    "gulp-cssmin",
-    "gulp-data",
-    "gulp-header",
-    "gulp-jade",
-    "gulp-plumber",
-    "gulp-sass",
-    "gulp-sitemap",
-    "gulp-sitemap-files",
-    "gulp-uglify",
-    "run-sequence" ]
-
   dep.each do |d|
     system "npm uninstall --save-dev " + d
     system "npm install --save-dev " + d
