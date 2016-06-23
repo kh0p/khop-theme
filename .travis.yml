@@ -4,6 +4,7 @@ before_script:
   - . build.sh
   - npm install -g gulp
   - npm install
+  - npm install --save-dev es6-promise
 cache:
   directories:
     - node_modules 
