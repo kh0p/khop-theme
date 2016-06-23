@@ -37,6 +37,17 @@ namespace :package do
   end
 end
 
+desc "Build that helps to run developement environment"
+task :devbuild do
+  system "mkdir _site/assets/tmp"
+  system "wget -O _site/assets/tmp/jquery.js \
+          https://code.jquery.com/jquery-2.2.4.min.js"
+  system "wget -O _site/assets/tmp/bootstrap.css \
+          https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css"
+  system "wget -O _site/assets/tmp/bootstrap.js \
+          https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"
+end
+
 desc "Build dependencies from ground-up"
 task :build_dep do
   dep.each do |d|
