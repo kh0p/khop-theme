@@ -62,3 +62,12 @@ task :update do
     system "npm install --save-dev " + d
   end
 end
+
+desc "Creating CSS directory structure"
+task :struct_css do
+  system "mkdir ./source/css/0-tools"
+  system "mkdir ./source/css/1-base"
+  system "mkdir ./source/css/2-modules"
+  system "mkdir ./source/css/3-sections"
+  system "mkdir ./source/css/4-layouts"
+end
