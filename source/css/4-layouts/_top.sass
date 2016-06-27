@@ -1,13 +1,28 @@
 .top-wrap
-  display: flex
-  justify-content: center
-  align-items: center
   height: 100vh
   background-color: pink
+  position: relative
 
 .top
-  padding: 25px
-  background-color: lightcoral
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 90%
+  height: 90vh
+  transform: translate(-50%, -50%)
+  margin: 0 auto
+  @include background(url("/assets/img/slide2.jpg"))
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.top:after
+  opacity: 0.2
+
+.top-inner
+  position: relative
+  margin: 32px
+  border: 1px solid rgba(255, 255, 255, 0.5)
 
 .container-fluid
   .row
