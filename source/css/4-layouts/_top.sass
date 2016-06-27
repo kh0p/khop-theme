@@ -11,19 +11,31 @@
   height: 90vh
   transform: translate(-50%, -50%)
   margin: 0 auto
-  @include background(url("/assets/img/slide2.jpg"))
+  font-style: Righteous
+  color: rgba(255, 255, 255, 1)
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.top:after
+  content: ""
+  background: url("/assets/img/slide2.jpg")
   background-repeat: no-repeat
   background-position: center
   background-size: cover
-
-.top:after
-  opacity: 0.2
+  opacity: 0.5
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  position: absolute
+  z-index: -1
 
 .top-inner
-  position: relative
-  margin: 32px
-  border: 1px solid rgba(255, 255, 255, 0.5)
 
 .container-fluid
   .row
     text-align: center
+    .col-md-12
+      margin: 32px
