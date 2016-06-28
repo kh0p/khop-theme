@@ -20,17 +20,28 @@ html(lang="en")
           li.nav-item: a(href="") work
           li.nav-item: a(href="") articles
           li.nav-item: a(href="") about
-    section
-      .post
-        img(src="")
-        h1 Title
-        time(datetime="2016-05-28") 4 days ago
-        p tag1, tag2, tag3
-      .post
-        img(src="")
-        h1 Title
-        time(datetime="2016-05-28") 4 days ago
-        p tag1, tag2, tag3
+          
+    .container-fluid
+      section
+        .row
+          .col-sm-6
+            .post
+              img(src="")
+              h1 Title
+              time(datetime="2016-05-28") 4 days ago
+              ul.list-inline
+                li.list-inline-item tag
+                li.list-inline-item another
+                li.list-inline-item yknow
+          .col-sm-6
+            .post
+              img(src="")
+              h1 Title
+              time(datetime="2016-05-28") 4 days ago
+              ul.list-inline
+                li.list-inline-item tag
+                li.list-inline-item another
+                li.list-inline-item yknow
     section
       hgroup
         h1 Articles
@@ -54,10 +65,10 @@ html(lang="en")
         p Some info about me. Lorem ipsum dolor sit amet, 
         p consectetur adipisicing elit, sed do eiusmod tempor 
         p incididunt ut labore et dolore magna aliqua.
-      ul
-        li: a(href="facebook"): img(src="fb")
-        li: a(href="twitter"): img(src="twitter")
-        li: a(href="github"): img(src="github")
+      ul.list-inline
+        li.list-inline-item: a(href="facebook"): img(src="fb")
+        li.list-inline-item: a(href="twitter"): img(src="twitter")
+        li.list-inline-item: a(href="github"): img(src="github")
     footer
       h1 Contact
       ul
