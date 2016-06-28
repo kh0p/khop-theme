@@ -1,3 +1,58 @@
 html(lang="en")
   include ./_partial/head
   body
+    header
+      hgroup
+        h1 Title
+        h2 Some text beneath the Title
+    nav
+      img(src="")
+      ul
+        li: a(href="") 
+        li: a(href="")
+        li: a(href="")
+        li: a(href="")
+    section
+      .post
+        img(src="")
+        h1 Title
+        datetime 4 days ago
+        p tag1, tag2, tag3
+      .post
+        img(src="")
+        h1 Title
+        datetime 4 days ago
+        p tag1, tag2, tag3
+    section
+      hgroup
+        h1 Articles
+      ul
+        li: a(href="")
+          time(datetime="2016-05-05") Day ago
+          h2 Some article title
+        li: a(href=""):
+          time(datetime="2016-04-28") Week ago
+          h2 Yet another artcile
+        li: a(href=""): 
+          time(datetime="2016-03-04") Month ago
+          h2 Two day ago Runing out of articles? 
+        li: a(href=""): 
+          time(datetime="2015-03-04") Year ago
+          h2 I hope it has come to an end
+    section
+      h1 About me!
+      img(src="")
+      aside
+        p Some info about me. Lorem ipsum dolor sit amet, 
+        p consectetur adipisicing elit, sed do eiusmod tempor 
+        p incididunt ut labore et dolore magna aliqua.
+      ul
+        li: a(href="facebook"): img(src="fb")
+        li: a(href="twitter"): img(src="twitter")
+        li: a(href="github"): img(src="github")
+    footer
+      h1 Contact
+      ul
+        li email
+        li phone
+      h2 Copyright (c) 2016 Kamil Zak All Rights Reserved.
