@@ -2,20 +2,24 @@ html(lang="en")
   include ./_partial/head
   body
     .container-fluid
-      header
-        img(src="/assets/img/slide1.jpg")
-        hgroup
-          .row.col-md-12
-            h1 Title
-          .row.col-md-12
-            h2 Some text beneath the Title
-    nav
-      img(src="")
-      ul
-        li: a(href="") front
-        li: a(href="") work
-        li: a(href="") articles
-        li: a(href="") about
+      .front-wrap
+        header
+          img(src="/assets/img/slide1.jpg")
+          hgroup
+            .row.col-md-12
+              h1 Title
+            .row.col-md-12
+              h2 Some text beneath the Title
+    
+    .navbar.navbar-fixed-top.navbar-light.bg-faded
+      nav
+        .navbar-brand
+          img(src="")
+        ul.nav.navbar-nav
+          li.nav-item: a(href="") front
+          li.nav-item: a(href="") work
+          li.nav-item: a(href="") articles
+          li.nav-item: a(href="") about
     section
       .post
         img(src="")
