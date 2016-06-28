@@ -1,27 +1,31 @@
 html(lang="en")
   include ./_partial/head
   body
-    header
-      hgroup
-        h1 Title
-        h2 Some text beneath the Title
+    .container-fluid
+      header
+        img(src="/assets/img/slide1.jpg")
+        hgroup
+          .row.col-md-12
+            h1 Title
+          .row.col-md-12
+            h2 Some text beneath the Title
     nav
       img(src="")
       ul
-        li: a(href="") 
-        li: a(href="")
-        li: a(href="")
-        li: a(href="")
+        li: a(href="") front
+        li: a(href="") work
+        li: a(href="") articles
+        li: a(href="") about
     section
       .post
         img(src="")
         h1 Title
-        datetime 4 days ago
+        time(datetime="2016-05-28") 4 days ago
         p tag1, tag2, tag3
       .post
         img(src="")
         h1 Title
-        datetime 4 days ago
+        time(datetime="2016-05-28") 4 days ago
         p tag1, tag2, tag3
     section
       hgroup
@@ -30,13 +34,13 @@ html(lang="en")
         li: a(href="")
           time(datetime="2016-05-05") Day ago
           h2 Some article title
-        li: a(href=""):
+        li: a(href="")
           time(datetime="2016-04-28") Week ago
           h2 Yet another artcile
-        li: a(href=""): 
+        li: a(href="") 
           time(datetime="2016-03-04") Month ago
           h2 Two day ago Runing out of articles? 
-        li: a(href=""): 
+        li: a(href="")
           time(datetime="2015-03-04") Year ago
           h2 I hope it has come to an end
     section
