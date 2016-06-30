@@ -5,7 +5,56 @@
   align-items: center
   height: 100vh
   position: relative
-  background-image: url(/assets/img/slide1.jpg)
+  //background-image: url(/assets/img/slide1.jpg)
+  //background-repeat: no-repeat
+  //background-position: center
+  //background-size: cover
+  font-family: Roboto
+  font-size: 42
+
+#bg
+  display: flex
+  justify-content: center
+  align-items: center
+
+  height: 95vh
+  width: 95vw
+  margin: 16px
+
+#bg:after
+  content : ""
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  background-image: url(/assets/img/slide2.jpg)
   background-repeat: no-repeat
   background-position: center
   background-size: cover
+  width: 100%
+  height: 100%
+  opacity : 0.2
+  z-index: -1
+
+#work-wrap
+  height: 100vh
+  background-color: red
+#articles-wrap
+  height: 100vh
+  background-color: blue
+#about-wrap
+  height: 100vh
+  background-color: yellow
+
+#dragon-curve
+  display: flex
+  justify-content: center
+  padding: 80px
+
+footer
+  height: 100vh
+
+.parallax-window
+  min-height: 100vh
+  background: transparent
+  filter: blur(4px)
