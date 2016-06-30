@@ -54,8 +54,8 @@ gulp.task('default', function () {
       baseDir: ['./_site/']
     }
   });
-  gulp.watch(['./source/css/*.scss','./source/css/**/_*.scss'],['sass']);
-  gulp.watch(['./source/css/*.sass','./source/css/**/_*.sass'],['sass']);
+  gulp.watch(['./source/css/*.scss','./source/css/**/*.scss'],['sass']);
+  gulp.watch(['./source/css/*.sass','./source/css/**/*.sass'],['sass']);
   gulp.watch(['./source/jade/*.jade', './source/jade/**/*.jade', './source/jade/**/_*.jade'],['jade']);
   gulp.watch(['./source/js/*.js'],['compile-js']);
 });

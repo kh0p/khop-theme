@@ -1,10 +1,9 @@
 html(lang="en")
   include ./_partial/head
   body
-    .container-fluid
-      .front-wrap
+    #front-wrap
+      .container-fluid
         header
-          img(src="/assets/img/slide1.jpg")
           hgroup
             .row.col-md-12
               h1 Title
@@ -75,3 +74,8 @@ html(lang="en")
         li email
         li phone
       h2 Copyright (c) 2016 Kamil Zak All Rights Reserved.
+      
+    .hamburger-wrap
+      button(type="button").hamburger.hamburger--3dx
+        span.hamburger-box
+          span.hamburger-inner
